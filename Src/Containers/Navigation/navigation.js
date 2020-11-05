@@ -10,6 +10,10 @@ import signUp from '../signUp'
 import signIn from '../signIn'
 import varifyCode from '../varifyCode'
 import termsAndConditions from '../termsAndConditions'
+import successFul from '../successFul'
+import forgotPassword from '../forgotPassword'
+import ForgotpasswordNewPassword from '../ForgotpasswordNewPassword'
+import Mainactivity8 from '../Mainactivity8'
 
 
 const Stack = createStackNavigator();
@@ -17,7 +21,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='termsAndConditions'
+      <Stack.Navigator initialRouteName='Mainactivity8'
         screenOptions={{
           headerShown: false
         }}>
@@ -27,6 +31,10 @@ export default function App() {
         <Stack.Screen name="signIn" component={signIn} options={{ title: 'signIn Screen' }}/>
         <Stack.Screen name="varifyCode" component={varifyCode} options={{ title: 'varifyCode Screen' }}/>
         <Stack.Screen name="termsAndConditions" component={termsAndConditions} options={{ title: 'termsAndConditions Screen' }}/>
+        <Stack.Screen name="successFul" component={successFul} options={{ title: 'successFul Screen' }}/>
+        <Stack.Screen name="forgotPassword" component={forgotPassword} options={{ title: 'forgotPassword Screen' }}/>
+        <Stack.Screen name="ForgotpasswordNewPassword" component={ForgotpasswordNewPassword} options={{ title: 'ForgotpasswordNewPassword Screen' }}/>
+        <Stack.Screen name="Mainactivity8" component={Mainactivity8} options={{ title: 'Mainactivity8 Screen' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
