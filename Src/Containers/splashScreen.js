@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react'
 import { Text, View, Image, ActivityIndicator } from 'react-native'
 
+
+//splash screen no need for APIs
+
+
 const splashScreen = (props) => {
     const { navigation } = props
+
+    //This function is for time after this time next screen will appear
     // useEffect(()=>{
     //     setTimeout(()=>{
     //         navigation.navigate('SignInScreen')
     //       },2000)
     // })
-    return (
 
+    return (
         <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#F6F6F6' }}>
             <View style={{ flex: 1 }}>
                 <Image source={require('../Images/splash.png')} style={{ width: 149.27, height: 142.67, marginTop: 120.29 }} />
@@ -22,8 +28,8 @@ const splashScreen = (props) => {
                 <Text style={{ fontSize: 14, margin: 30, textAlign: 'center', color: '#444F63' }}>Copyright @ 2014-2020 DDDDDDDDDDD Pty Ltd. All right reserved. </Text>
             </View>
         </View>
-
     )
 }
 
+//this is for exportin splashScreen function to all project
 export default splashScreen;

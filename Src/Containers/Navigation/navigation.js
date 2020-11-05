@@ -8,6 +8,8 @@ import splashScreen from '../splashScreen'
 import Introduction from '../Introduction'
 import signUp from '../signUp'
 import signIn from '../signIn'
+import varifyCode from '../varifyCode'
+import termsAndConditions from '../termsAndConditions'
 
 
 const Stack = createStackNavigator();
@@ -15,7 +17,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='signIn'
+      <Stack.Navigator initialRouteName='termsAndConditions'
         screenOptions={{
           headerShown: false
         }}>
@@ -23,6 +25,8 @@ export default function App() {
         <Stack.Screen name="Introduction" component={Introduction} options={{ title: 'Introduction Screen' }}/>
         <Stack.Screen name="signUp" component={signUp} options={{ title: 'signUp Screen' }}/>
         <Stack.Screen name="signIn" component={signIn} options={{ title: 'signIn Screen' }}/>
+        <Stack.Screen name="varifyCode" component={varifyCode} options={{ title: 'varifyCode Screen' }}/>
+        <Stack.Screen name="termsAndConditions" component={termsAndConditions} options={{ title: 'termsAndConditions Screen' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
