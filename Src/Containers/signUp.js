@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Text, View, Image, ActivityIndicator,TouchableOpacity } from 'react-native'
 import { Container, Content, Button, Item, Input } from 'native-base'
+//this is libabry use for gradient colors
 import LinearGradient from 'react-native-linear-gradient';
  
 const signUp = (props) => {

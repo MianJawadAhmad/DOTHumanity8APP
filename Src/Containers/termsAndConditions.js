@@ -5,6 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import SearchableDropdown from 'react-native-searchable-dropdown';
 
 
+//this is data for dropdown search component
 var items = [
     {
       id: 1,
@@ -32,9 +33,11 @@ var items = [
 
 
 const termsAndConditions = (props) => {
+    //this is state value for dropdown search show and hide
     const [loading, setLoading] = useState('b');
     const { navigation } = props
 
+//this function use for dropdown search show and hide
     const searchTure = () =>{
         if(loading == 'b'){
             setLoading('a')
@@ -44,7 +47,7 @@ const termsAndConditions = (props) => {
         
     }
 
-
+//this is dropdowm search function
     const searchScroll = () =>{
         if(loading === 'a'){
           return(

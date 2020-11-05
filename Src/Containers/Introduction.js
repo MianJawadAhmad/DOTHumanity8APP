@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { Text, View, Image, ActivityIndicator } from 'react-native'
+//Native base is a liabrary use for components
 import { Container, Content, Button } from 'native-base'
 
 const Introduction = (props) => {
+    //this line use for navigation
     const { navigation } = props
     return (
-
         <Container style={{ flex: 1, backgroundColor: '#F6F6F6' }}>
             <View style={{ flex: 1.5, backgroundColor: '#F6F6F6', alignItems: 'center', justifyContent: 'center' }}>
                 <Image style={{ width: 299, height: 365.3 }} source={require('../Images/intro1.png')} />
