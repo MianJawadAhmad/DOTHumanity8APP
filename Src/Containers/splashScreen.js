@@ -9,11 +9,11 @@ const splashScreen = (props) => {
     const { navigation } = props
 
     //This function is for time after this time next screen will appear
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         navigation.navigate('SignInScreen')
-    //       },2000)
-    // })
+    useEffect(()=>{
+        setTimeout(()=>{
+            navigation.navigate('Introduction')
+          },2000)
+    })
 
     return (
         <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#F6F6F6' }}>

@@ -34,12 +34,12 @@ const signIn = (props) => {
                         </View>
                         <Input placeholder='Password' />
                     </Item>
-                    <TouchableOpacity style={{justifyContent:'center',alignItems:'center',alignSelf:'center',marginTop:25}}>
+                    <TouchableOpacity style={{justifyContent:'center',alignItems:'center',alignSelf:'center',marginTop:25}} onPress={()=>navigation.navigate('forgotPassword')}>
                         <Text style={{fontSize:18,color:'#1585D8'}}>
                             Forgot Password
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{width:184,height:41,backgroundColor:'#8D7EE2',justifyContent:'center',alignItems:'center',alignSelf:'center',marginTop:25,borderRadius:5}}>
+                    <TouchableOpacity style={{width:184,height:41,backgroundColor:'#8D7EE2',justifyContent:'center',alignItems:'center',alignSelf:'center',marginTop:25,borderRadius:5}} onPress={()=>navigation.navigate('tabApp')}>
                     <LinearGradient colors={['#7C6CD3', '#513FAC', '#4A37A5']} style={{flex: 1,height:'100%',width:'100%', alignItems:'center',justifyContent:'center',borderRadius:5}}>
                         <Text style={{fontSize:20,fontWeight:'bold',color:'#FFFFFF'}}>
                             Login

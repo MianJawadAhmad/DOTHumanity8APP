@@ -59,139 +59,29 @@ const Mainactivity10 = (props) => {
         );
     }
 
-
-    {/* My requests  */ }
-    _renderItemRequests = ({ item, index }) => {
+    {/* Popular tips   */ }
+    _renderItemPopular = ({ item, index }) => {
         return (
-            <View style={styles.carouselStreq}>
-                <Card style={{ width: 340, backgroundColor: '#F2F4F7' }}>
+            <View style={styles.carouselSttip}>
+                <Card style={{ width: 354, backgroundColor: '#F2F4F7' }}>
                     <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                        <Left>
-                            <Image style={{ width: 50.77, height: 50.15 }} source={require('../Images/avatar.png')} />
-                            <Body>
-                                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Julia Pe.</Text>
-                                <Text note>24 minutes ago</Text>
-                            </Body>
+                        <Image source={require('../Images/Layer.png')} style={{ height: 146.53, width: 353.89, flex: 1 }} />
+                    </CardItem>
+                    <CardItem style={{ backgroundColor: '#F2F4F7' }}>
+                        <Left style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+
+                            <Text style={{ fontSize: 18 }}>AppAppAppAppApp </Text>
+                            <Text style={{ fontSize: 14 }}>Published on Jun 16, 2018 </Text>
                         </Left>
                         <Right>
-                            <TouchableOpacity style={{ width: 119.88, height: 31.47, backgroundColor: '#8646BF', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}>
-                                <Text style={{ fontSize: 18, color: '#FFFFFF' }}>
-                                    Pending
-                                </Text>
-                            </TouchableOpacity>
+                            <Text style={{ fontSize: 14 }}>2 min </Text>
+                            <Text style={{ fontSize: 14 }}>2,401 views </Text>
                         </Right>
-                    </CardItem>
-                    <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                        <Body>
-                            <Text style={{ fontSize: 14, fontWeight: 'bold' }}>
-                                5 Hours of Specialist Support Coordination
-                            </Text>
-                        </Body>
-                    </CardItem>
-                    <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                        <Body>
-                            <Text style={{ fontSize: 18 }}>
-                                Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem ipsum has been the industry’s Lorem Ipsum is simplyLorem ipsum has been the industry’s Lorem Ipsum is simply Read more ...
-                            </Text>
-                        </Body>
                     </CardItem>
                 </Card>
             </View>
         );
     }
-
-
-    {/* My Meeting/Session  */ }
-    _renderItemMeeting = ({ item, index }) => {
-        return (
-            <View style={styles.carouselStmet}>
-                <Card style={{ width: 340, backgroundColor: '#F2F4F7' }}>
-                    <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                        <Left>
-                            <Image style={{ width: 50.77, height: 50.15 }} source={require('../Images/avatar.png')} />
-                            <Body>
-                                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Julia Pe.</Text>
-                                <Text note>24 minutes ago</Text>
-                            </Body>
-                        </Left>
-                        <Right>
-                            <TouchableOpacity style={{ width: 119.88, height: 31.47, backgroundColor: '#8646BF', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}>
-                                <Text style={{ fontSize: 18, color: '#FFFFFF' }}>
-                                    Pending
-                            </Text>
-                            </TouchableOpacity>
-                        </Right>
-                    </CardItem>
-                    <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                        <Body>
-                            <Text style={{ fontSize: 14, fontWeight: 'bold' }}>
-                                5 Hours of Specialist Support Coordination
-                        </Text>
-                        </Body>
-                    </CardItem>
-                    <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                        <Body>
-                            <Text style={{ fontSize: 18 }}>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the ndustry’s printing and typesetting industry Read more...
-                        </Text>
-                        </Body>
-                    </CardItem>
-                    <CardItem style={{ backgroundColor: '#F2F4F7',flexDirection:'row' }}>
-                    <View style={{ backgroundColor: '#F2F4F7',flexDirection:'column'}}>
-                            <Text style={{ fontSize: 16 }}>Date: 10 July 2020 </Text>
-                            <Text style={{ fontSize: 16 }}>Start Time: 13:30 PM </Text>
-                    </View>
-                    <View style={{ backgroundColor: '#F2F4F7',width:150,alignItems:'flex-end'}}>
-                    <Image style={{ width:83.78, height:69.51 }} source={require('../Images/cl.png')} />
-                    </View>
-                    </CardItem>
-                </Card>
-            </View>
-        );
-    }
-
-
-
-        {/* My Questions   */ }
-        _renderItemQuestions = ({ item, index }) => {
-            return (
-                <View style={styles.carouselStqus}>
-                    <Card style={{ width: 340, backgroundColor: '#F2F4F7' }}>
-                        <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                            <Left>
-                                <Image style={{ width: 50.77, height: 50.15 }} source={require('../Images/avatar.png')} />
-                                <Body>
-                                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>John Ci.</Text>
-                                    <Text note>24 minutes ago</Text>
-                                </Body>
-                            </Left>
-                            <Right>
-                                <TouchableOpacity style={{ width: 119.88, height: 31.47, backgroundColor: '#8646BF', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}>
-                                    <Text style={{ fontSize: 18, color: '#FFFFFF' }}>
-                                        Pending
-                                    </Text>
-                                </TouchableOpacity>
-                            </Right>
-                        </CardItem>
-                        {/* <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                            <Body>
-                                <Text style={{ fontSize: 14, fontWeight: 'bold' }}>
-                                    5 Hours of Specialist Support Coordination
-                                </Text>
-                            </Body>
-                        </CardItem> */}
-                        <CardItem style={{ backgroundColor: '#F2F4F7' }}>
-                            <Body>
-                                <Text style={{ fontSize: 18 }}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the ndustry’s printing and typesetting industry Read more...
-                                </Text>
-                            </Body>
-                        </CardItem>
-                    </Card>
-                </View>
-            );
-        }
-
 
 
     return (
@@ -213,9 +103,8 @@ const Mainactivity10 = (props) => {
                 </Right>
             </Header>
             <Content contentContainerStyle={{ alignItems: 'center' }} >
+                <View style={{marginTop:10}}/>
                 <Content style={{ width: 377, backgroundColor: '#F1EFFC', borderTopRightRadius: 50 }} >
-                  
-                  
                     {/* My services  */}
                     <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My services </Text>
                     <Carousel
@@ -234,37 +123,99 @@ const Mainactivity10 = (props) => {
                         inactiveDotOpacity={0.4}
                         inactiveDotScale={0.6}
                         carouselRef={this._slider1Ref}
-                        tappableDots={!!this._slider1Ref}
+                        tap
+                        pableDots={!!this._slider1Ref}
                     />
 
-
-                    {/* My requests  */}
                     <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My requests  </Text>
+                    <View style={{alignItems:'center'}}>
+                        <Card style={{ width: 340, backgroundColor: '#F2F4F7',alignItems:'center' }}>
+                            <CardItem style={{ backgroundColor: '#F2F4F7',alignItems:'center' }}>
+                                <Body>
+                                    <Text style={{ fontSize: 20}}>
+                                    You do not have an active request.
+                                </Text>
+                                </Body>
+                            </CardItem>
+                            <CardItem style={{ backgroundColor: '#F2F4F7',alignItems:'center'}}>
+                                <TouchableOpacity style={{ width: 197, height: 37, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', borderRadius: 5 }}>
+                                    <LinearGradient colors={['#7C6CD3', '#513FAC', '#4A37A5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
+                                        <Text style={{ fontSize: 16, color: '#FFFFFF' }}>
+                                            Request New Service
+                                        </Text>
+                                    </LinearGradient>
+                                </TouchableOpacity>
+                            </CardItem>
+                        </Card>
+                    </View>
+
+                    <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My Meeting/Session  </Text>
+                    <View style={{alignItems:'center'}}>
+                        <Card style={{ width: 340, backgroundColor: '#F2F4F7',alignItems:'center' }}>
+                            <CardItem style={{ backgroundColor: '#F2F4F7',alignItems:'center' }}>
+                                <Body>
+                                    <Text style={{ fontSize: 20}}>
+                                    You do not have meeting or session.
+                                </Text>
+                                </Body>
+                            </CardItem>
+                            <CardItem style={{ backgroundColor: '#F2F4F7',alignItems:'center'}}>
+                                <TouchableOpacity style={{ width: 248, height: 37, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', borderRadius: 5 }}>
+                                    <LinearGradient colors={['#7C6CD3', '#513FAC', '#4A37A5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
+                                        <Text style={{ fontSize: 16, color: '#FFFFFF' }}>
+                                        Request New Meeting/Session
+                                        </Text>
+                                    </LinearGradient>
+                                </TouchableOpacity>
+                            </CardItem>
+                        </Card>
+                    </View>
+
+                    <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My Questions   </Text>
+                    <View style={{alignItems:'center'}}>
+                        <Card style={{ width: 340, backgroundColor: '#F2F4F7',alignItems:'center' }}>
+                            <CardItem style={{ backgroundColor: '#F2F4F7',alignItems:'center' }}>
+                                <Body>
+                                    <Text style={{ fontSize: 20}}>
+                                    You do not have an active question.
+                                </Text>
+                                </Body>
+                            </CardItem>
+                            <CardItem style={{ backgroundColor: '#F2F4F7',alignItems:'center'}}>
+                                <TouchableOpacity style={{ width: 172, height: 37, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', borderRadius: 5 }}>
+                                    <LinearGradient colors={['#7C6CD3', '#513FAC', '#4A37A5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
+                                        <Text style={{ fontSize: 16, color: '#FFFFFF' }}>
+                                        Ask a question
+                                        </Text>
+                                    </LinearGradient>
+                                </TouchableOpacity>
+                            </CardItem>
+                        </Card>
+                    </View>
+
+
+                     {/* Popular tips */}
+                     <View style={{ flexDirection: 'row' }}>
+                        <Left>
+                            <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My services </Text>
+                        </Left>
+                        <Right>
+                            <TouchableOpacity style={{ margin: 10 }}>
+                                <Text style={{ fontSize: 18, color: '#1585D8' }}>
+                                    See all
+                        </Text>
+                            </TouchableOpacity>
+                        </Right>
+                    </View>
+
                     <Carousel
                         ref={(c) => { this._carousel = c; }}
                         data={items}
-                        renderItem={this._renderItemRequests}
+                        renderItem={this._renderItemPopular}
                         sliderWidth={369}
                         itemWidth={359}
                         onSnapToItem={(index) => setLoading(index)}
                     />
-                    <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-                        <TouchableOpacity style={{ width: 116.05, height: 34.31, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, marginRight: 10 }}>
-                            <LinearGradient colors={['#FEFFFF', '#D7F1FA', '#B5E5F5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 18, color: '#000000' }}>
-                                    Edit
-                        </Text>
-                            </LinearGradient>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={{ width: 116.05, height: 34.31, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, marginRight: 20 }}>
-                            <LinearGradient colors={['#FEFFFF', '#D7F1FA', '#B5E5F5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 18, color: '#000000' }}>
-                                    Cancel
-                        </Text>
-                            </LinearGradient>
-                        </TouchableOpacity>
-                    </View>
                     <Pagination
                         dotsLength={items.length}
                         dotColor={'#6338A1'}
@@ -277,83 +228,6 @@ const Mainactivity10 = (props) => {
                     />
 
 
-                    {/* My Meeting/Session */}
-                    <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My Meeting/Session </Text>
-                    <Carousel
-                        ref={(c) => { this._carousel = c; }}
-                        data={items}
-                        renderItem={this._renderItemMeeting}
-                        sliderWidth={369}
-                        itemWidth={359}
-                        onSnapToItem={(index) => setLoading(index)}
-                    />
-                    <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-                        <TouchableOpacity style={{ width: 116.05, height: 34.31, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, marginRight: 10 }}>
-                            <LinearGradient colors={['#FEFFFF', '#D7F1FA', '#B5E5F5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 18, color: '#000000' }}>
-                                    Edit
-                        </Text>
-                            </LinearGradient>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={{ width: 116.05, height: 34.31, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, marginRight: 20 }}>
-                            <LinearGradient colors={['#FEFFFF', '#D7F1FA', '#B5E5F5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 18, color: '#000000' }}>
-                                    Cancel
-                        </Text>
-                            </LinearGradient>
-                        </TouchableOpacity>
-                    </View>
-                    <Pagination
-                        dotsLength={items.length}
-                        dotColor={'#6338A1'}
-                        inactiveDotColor={'#6338A1'}
-                        activeDotIndex={loading}
-                        inactiveDotOpacity={0.4}
-                        inactiveDotScale={0.6}
-                        carouselRef={this._slider1Ref}
-                        tappableDots={!!this._slider1Ref}
-                    />
-
-
-
-                    {/* My Questions  */}
-                    <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My Questions  </Text>
-                    <Carousel
-                        ref={(c) => { this._carousel = c; }}
-                        data={items}
-                        renderItem={this._renderItemQuestions}
-                        sliderWidth={369}
-                        itemWidth={359}
-                        onSnapToItem={(index) => setLoading(index)}
-                    />
-                    <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-                        <TouchableOpacity style={{ width: 116.05, height: 34.31, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, marginRight: 10 }}>
-                            <LinearGradient colors={['#FEFFFF', '#D7F1FA', '#B5E5F5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 18, color: '#000000' }}>
-                                    Edit
-                        </Text>
-                            </LinearGradient>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={{ width: 116.05, height: 34.31, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, marginRight: 20 }}>
-                            <LinearGradient colors={['#FEFFFF', '#D7F1FA', '#B5E5F5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 18, color: '#000000' }}>
-                                    Cancel
-                        </Text>
-                            </LinearGradient>
-                        </TouchableOpacity>
-                    </View>
-                    <Pagination
-                        dotsLength={items.length}
-                        dotColor={'#6338A1'}
-                        inactiveDotColor={'#6338A1'}
-                        activeDotIndex={loading}
-                        inactiveDotOpacity={0.4}
-                        inactiveDotScale={0.6}
-                        carouselRef={this._slider1Ref}
-                        tappableDots={!!this._slider1Ref}
-                    />
 
                 </Content>
             </Content>
@@ -404,7 +278,16 @@ var styles = StyleSheet.create({
         borderRadius: 20,
 
         flexDirection: 'row'
-    }
+    },
+    carouselSttip: {
+        width: 354,
+        height: 245.36,
+        backgroundColor: '#F2F4F7',
+        marginLeft: 10,
+        borderRadius: 20,
+
+        flexDirection: 'row'
+    },
 });
 
 

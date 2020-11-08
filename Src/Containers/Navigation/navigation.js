@@ -1,9 +1,10 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
+import {Image } from 'react-native'
 /*navigation*/
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import splashScreen from '../splashScreen'
 import Introduction from '../Introduction'
 import signUp from '../signUp'
@@ -14,15 +15,72 @@ import successFul from '../successFul'
 import forgotPassword from '../forgotPassword'
 import ForgotpasswordNewPassword from '../ForgotpasswordNewPassword'
 import Mainactivity8 from '../Mainactivity8'
-// import Mainactivity10 from '../Mainactivity10'
+import Mainactivity10 from '../Mainactivity10'
+import notification from '../notification'
+import messages from '../messages'
+import settings from '../settings'
+import menu from '../menu'
+import popularTips from '../popularTips'
+import popularTipsDetails from '../popularTipsDetails'
 
 
 const Stack = createStackNavigator();
 
+const Tab = createBottomTabNavigator();
+
+function tabApp() {
+  return (
+    <Tab.Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
+        let img;
+        if (route.name === 'messages') {
+          img = focused
+            ? <Image style={{ width: 30.8, height: 30.8 }} source={require('../../Images/Messages.png')} />
+            : <Image style={{ width: 30.8, height: 30.8 }} source={require('../../Images/Messages1.png')} />;
+        } else if (route.name === 'Mainactivity8') {
+          img = focused
+            ? <Image style={{ width: 88.3, height: 88.3 }} source={require('../../Images/home.png')} />
+            : <Image style={{ width: 88.3, height: 88.3 }} source={require('../../Images/home1.png')} />;
+        } else if (route.name === 'notification') {
+          img = focused
+          ?<Image style={{ width: 18.49, height: 24.81 }} source={require('../../Images/noti1.png')} />
+          : <Image style={{ width: 18.49, height: 24.81 }} source={require('../../Images/noti.png')} />;
+        }else if (route.name === 'settings') {
+          img = focused
+          ?<Image style={{ width: 24.49, height: 24.81 }} source={require('../../Images/settings1.png')} />
+          : <Image style={{ width: 24.49, height: 24.81 }} source={require('../../Images/settings.png')} />;
+        }else if (route.name === 'menu') {
+          img = focused
+          ?<Image style={{ width: 25.27, height: 18.96 }} source={require('../../Images/menu1.png')} />
+          : <Image style={{ width: 25.27, height: 18.96 }} source={require('../../Images/menu.png')} />;
+        }
+        
+        // You can return any component that you like here!
+        // return <Ionicons name={iconName} size={size} color={color} />;
+        return img;
+      },
+    })}
+    tabBarOptions={{
+      activeTintColor: '#7030A9',
+      inactiveTintColor: '#D9E4ED',
+    }}
+  >
+        <Stack.Screen name="messages" component={messages} options={{title: 'messages'}}/>
+        <Stack.Screen name="notification" component={notification} options={{title: 'notification'}}/>
+        <Stack.Screen name="Mainactivity8" component={Mainactivity8} options={{ title: '' }}/>
+        <Stack.Screen name="settings" component={settings} options={{ title: 'Settings' }}/>
+        <Stack.Screen name="menu" component={menu} options={{ title: 'menu' }}/>
+        
+      </Tab.Navigator>
+  );
+}
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Mainactivity8'
+      <Stack.Navigator initialRouteName='splashScreen'
         screenOptions={{
           headerShown: false
         }}>
@@ -35,8 +93,10 @@ export default function App() {
         <Stack.Screen name="successFul" component={successFul} options={{ title: 'successFul Screen' }}/>
         <Stack.Screen name="forgotPassword" component={forgotPassword} options={{ title: 'forgotPassword Screen' }}/>
         <Stack.Screen name="ForgotpasswordNewPassword" component={ForgotpasswordNewPassword} options={{ title: 'ForgotpasswordNewPassword Screen' }}/>
-        <Stack.Screen name="Mainactivity8" component={Mainactivity8} options={{ title: 'Mainactivity8 Screen' }}/>
-        {/* <Stack.Screen mame="Mainactivity10" component={Mainactivity10} options={{title: 'Mainactivity10 Screen'}}/> */}
+        <Stack.Screen name="tabApp" component={tabApp} />
+        <Stack.Screen name="popularTips" component={popularTips} options={{ title: 'popularTips Screen' }}/>
+        <Stack.Screen name="popularTipsDetails" component={popularTipsDetails} options={{ title: 'popularTipsDetails Screen' }}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

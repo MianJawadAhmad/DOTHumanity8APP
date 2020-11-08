@@ -169,7 +169,7 @@ const termsAndConditions = (props) => {
                     <Text style={{ fontSize: 18, fontWeight: 'bold', marginLeft: 40, marginTop: 40 }}>Privacy</Text>
                     <Text style={{ fontSize: 14, marginTop: 20, marginLeft: 40, marginRight: 35 }}>When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us. When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us. </Text>
 
-                    <TouchableOpacity style={{width:184,height:41,backgroundColor:'#8D7EE2',justifyContent:'center',alignItems:'center',alignSelf:'center',marginTop:40,borderRadius:5}}>
+                    <TouchableOpacity style={{width:184,height:41,backgroundColor:'#8D7EE2',justifyContent:'center',alignItems:'center',alignSelf:'center',marginTop:40,borderRadius:5}}  onPress={()=>navigation.navigate('successFul')}>
                     <LinearGradient colors={['#7C6CD3', '#513FAC', '#4A37A5']} style={{flex: 1,height:'100%',width:'100%', alignItems:'center',justifyContent:'center',borderRadius:5}}>
                         <Text style={{fontSize:20,fontWeight:'bold',color:'#FFFFFF'}}>
                         I agree

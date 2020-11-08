@@ -25,7 +25,7 @@ const ForgotpasswordNewPassword = (props) => {
                         </View>
                         <Input placeholder='Confirm Password' />
                     </Item>
-                    <TouchableOpacity style={{ width: 184, height: 41, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 40, borderRadius: 5 }}>
+                    <TouchableOpacity style={{ width: 184, height: 41, backgroundColor: '#8D7EE2', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 40, borderRadius: 5 }} onPress={()=>navigation.navigate('successFul')}>
                         <LinearGradient colors={['#7C6CD3', '#513FAC', '#4A37A5']} style={{ flex: 1, height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
                             <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>
                             Submit
