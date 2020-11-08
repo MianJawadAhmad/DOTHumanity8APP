@@ -30,7 +30,7 @@ var items = [
 
 const SLIDER_1_FIRST_ITEM = 0;
 
-const Mainactivity8 = (props) => {
+const Mainactivity10 = (props) => {
     const { navigation } = props
     const [loading, setLoading] = useState(SLIDER_1_FIRST_ITEM);
 
@@ -408,4 +408,4 @@ var styles = StyleSheet.create({
 });
 
 
-export default Mainactivity8;
+export default Mainactivity10;

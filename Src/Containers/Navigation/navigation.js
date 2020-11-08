@@ -14,6 +14,7 @@ import successFul from '../successFul'
 import forgotPassword from '../forgotPassword'
 import ForgotpasswordNewPassword from '../ForgotpasswordNewPassword'
 import Mainactivity8 from '../Mainactivity8'
+// import Mainactivity10 from '../Mainactivity10'
 
 
 const Stack = createStackNavigator();
@@ -35,6 +36,7 @@ export default function App() {
         <Stack.Screen name="forgotPassword" component={forgotPassword} options={{ title: 'forgotPassword Screen' }}/>
         <Stack.Screen name="ForgotpasswordNewPassword" component={ForgotpasswordNewPassword} options={{ title: 'ForgotpasswordNewPassword Screen' }}/>
         <Stack.Screen name="Mainactivity8" component={Mainactivity8} options={{ title: 'Mainactivity8 Screen' }}/>
+        {/* <Stack.Screen mame="Mainactivity10" component={Mainactivity10} options={{title: 'Mainactivity10 Screen'}}/> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
