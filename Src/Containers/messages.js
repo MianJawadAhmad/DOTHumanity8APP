@@ -10,13 +10,12 @@ const messages = (props) => {
         <Container style={{ backgroundColor: '#F6F6F6' }}>
             <Header style={{ borderBottomColor: '#F6F6F6', backgroundColor: '#F6F6F6' }}>
                 <Left>
-                    <TouchableOpacity style={{ marginLeft: 20 }}>
-                        <Image style={{ width: 45.21, height: 43.21 }} source={require('../Images/img5.png')} />
+                <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }}>
+                        <Image style={{ width: 12.97, height: 12.97 }} source={require('../Images/backIcon.png')} />
                     </TouchableOpacity>
-
                 </Left>
                 <Body>
-                    <Text style={{ fontSize: 22 }}>My services </Text>
+                    <Text style={{ fontSize: 24,fontWeight:'bold' }}>Inbox </Text>
                 </Body>
                 <Right/>
             </Header>

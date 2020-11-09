@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Text, View, Image, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native'
 import { Container, Content, Button, Item, Input, Header, Card, CardItem, Thumbnail, Left, Body, Right } from 'native-base'
 
-const notification = (props) => {
+const editProfile = (props) => {
     const { navigation } = props
 
 
@@ -10,12 +10,13 @@ const notification = (props) => {
         <Container style={{ backgroundColor: '#F6F6F6' }}>
             <Header style={{ borderBottomColor: '#F6F6F6', backgroundColor: '#F6F6F6' }}>
                 <Left>
-                <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }}>
-                        <Image style={{ width: 12.97, height: 12.97 }} source={require('../Images/backIcon.png')} />
+                    <TouchableOpacity style={{ marginLeft: 20 }}>
+                        <Image style={{ width: 45.21, height: 43.21 }} source={require('../Images/img5.png')} />
                     </TouchableOpacity>
+
                 </Left>
                 <Body>
-                    <Text style={{ fontSize: 24,fontWeight:'bold'}}>Notification </Text>
+                    <Text style={{ fontSize: 22 }}>Edit profile </Text>
                 </Body>
                 <Right/>
             </Header>
@@ -31,4 +32,4 @@ const notification = (props) => {
 
 
 
-export default notification;
+export default editProfile;

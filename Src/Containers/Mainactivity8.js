@@ -44,12 +44,14 @@ const Mainactivity8 = (props) => {
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{ fontSize: 21, color: '#032F3E', textAlign: 'center' }}>Specialist Support {"\n"} Coordinator </Text>
-                    <TouchableOpacity style={{ width: 201, height: 37, backgroundColor: '#F2F4F7', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, borderColor: '#CED0DA', borderWidth: 0.7 }}>
+                    <TouchableOpacity style={{ width: 201, height: 37, backgroundColor: '#F2F4F7', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 5, borderRadius: 5, borderColor: '#CED0DA', borderWidth: 0.7 }}
+                    onPress={()=>navigation.navigate('RequestNewService')}>
                         <Text style={{ fontSize: 16, color: '#354052' }}>
                             Request New Service
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ width: 201, height: 37, backgroundColor: '#F2F4F7', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 15, borderRadius: 5, borderColor: '#CED0DA', borderWidth: 0.7 }}>
+                    <TouchableOpacity style={{ width: 201, height: 37, backgroundColor: '#F2F4F7', justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginTop: 15, borderRadius: 5, borderColor: '#CED0DA', borderWidth: 0.7 }}
+                    onPress={()=>navigation.navigate('Myrequests')}>
                         <Text style={{ fontSize: 16, color: '#354052' }}>
                             My requests
                         </Text>
@@ -265,7 +267,10 @@ const Mainactivity8 = (props) => {
 
 
                     {/* My requests  */}
+                    <TouchableOpacity onPress={()=>navigation.navigate('Myrequests')}>
                     <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My requests  </Text>
+                    </TouchableOpacity>
+                    
                     <Carousel
                         ref={(c) => { this._carousel = c; }}
                         data={items}

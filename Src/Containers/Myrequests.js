@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Text, View, Image, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native'
 import { Container, Content, Button, Item, Input, Header, Card, CardItem, Thumbnail, Left, Body, Right } from 'native-base'
 
-const notification = (props) => {
+const Myrequests = (props) => {
     const { navigation } = props
 
 
@@ -15,7 +15,7 @@ const notification = (props) => {
                     </TouchableOpacity>
                 </Left>
                 <Body>
-                    <Text style={{ fontSize: 24,fontWeight:'bold'}}>Notification </Text>
+                    <Text style={{ fontSize: 22 }}>My requests</Text>
                 </Body>
                 <Right/>
             </Header>
@@ -31,4 +31,4 @@ const notification = (props) => {
 
 
 
-export default notification;
+export default Myrequests;

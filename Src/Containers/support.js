@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Text, View, Image, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native'
 import { Container, Content, Button, Item, Input, Header, Card, CardItem, Thumbnail, Left, Body, Right } from 'native-base'
 
-const notification = (props) => {
+const support = (props) => {
     const { navigation } = props
 
 
@@ -13,9 +13,10 @@ const notification = (props) => {
                 <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }}>
                         <Image style={{ width: 12.97, height: 12.97 }} source={require('../Images/backIcon.png')} />
                     </TouchableOpacity>
+
                 </Left>
                 <Body>
-                    <Text style={{ fontSize: 24,fontWeight:'bold'}}>Notification </Text>
+                    <Text style={{ fontSize: 22 }}>Support </Text>
                 </Body>
                 <Right/>
             </Header>
@@ -31,4 +32,4 @@ const notification = (props) => {
 
 
 
-export default notification;
+export default support;

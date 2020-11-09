@@ -22,6 +22,11 @@ import settings from '../settings'
 import menu from '../menu'
 import popularTips from '../popularTips'
 import popularTipsDetails from '../popularTipsDetails'
+import editProfile from '../editProfile'
+import support from '../support'
+import aboutUs from '../aboutUs'
+import RequestNewService from '../RequestNewService'
+import Myrequests from '../Myrequests'
 
 
 const Stack = createStackNavigator();
@@ -72,10 +77,11 @@ function tabApp() {
         <Stack.Screen name="Mainactivity8" component={Mainactivity8} options={{ title: '' }}/>
         <Stack.Screen name="settings" component={settings} options={{ title: 'Settings' }}/>
         <Stack.Screen name="menu" component={menu} options={{ title: 'menu' }}/>
-        
       </Tab.Navigator>
   );
 }
+
+
 
 export default function App() {
   return (
@@ -96,7 +102,11 @@ export default function App() {
         <Stack.Screen name="tabApp" component={tabApp} />
         <Stack.Screen name="popularTips" component={popularTips} options={{ title: 'popularTips Screen' }}/>
         <Stack.Screen name="popularTipsDetails" component={popularTipsDetails} options={{ title: 'popularTipsDetails Screen' }}/>
-        
+        <Stack.Screen name="editProfile" component={editProfile} options={{ title: 'editProfile' }}/>
+        <Stack.Screen name="support" component={support} options={{ title: 'support' }}/>
+        <Stack.Screen name="aboutUs" component={aboutUs} options={{ title: 'aboutUs' }}/>
+        <Stack.Screen name="RequestNewService" component={RequestNewService} options={{ title: 'RequestNewService' }}/>
+        <Stack.Screen name="Myrequests" component={Myrequests} options={{ title: 'Myrequests' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
