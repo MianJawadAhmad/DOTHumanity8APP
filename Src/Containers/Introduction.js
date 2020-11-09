@@ -1,22 +1,57 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text, View, Image, ActivityIndicator,TouchableOpacity } from 'react-native'
 //Native base is a liabrary use for components
 import { Container, Content, Button } from 'native-base'
 import LinearGradient from 'react-native-linear-gradient';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { Pagination } from 'react-native-snap-carousel';
+
+
+var items = [
+    {
+        id: 1,
+        title: 'Select 1 ',
+    },
+    {
+        id: 2,
+        title: 'Select 2 ',
+    },
+    {
+        id: 3,
+        title: 'Select 3 ',
+    },
+    {
+        id: 4,
+        title: 'Select 4 ',
+    },
+    {
+        id: 5,
+        title: 'Select 5 ',
+    }
+];
+
+const SLIDER_1_FIRST_ITEM = 0;
+
 const Introduction = (props) => {
     //this line use for navigation
-    const { navigation } = props
+    const { navigation } = props;
+    const [loading, setLoading] = useState(SLIDER_1_FIRST_ITEM);
+
     return (
         <Container style={{ flex: 1, backgroundColor: '#F6F6F6' }}>
             <View style={{ flex: 1.5, backgroundColor: '#F6F6F6', alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={{ width: 299, height: 365.3 }} source={require('../Images/intro1.png')} />
+                <Image style={{ width: wp('70%'), height: hp('40%') }} source={require('../Images/intro1.png')} />
                 <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ fontSize: 60, color: '#1585D8' }}>.</Text>
-                    <Text style={{ fontSize: 60, color: '#79B6E3' }}>.</Text>
-                    <Text style={{ fontSize: 60, color: '#79B6E3' }}>.</Text>
-                    <Text style={{ fontSize: 60, color: '#79B6E3' }}>.</Text>
-                    <Text style={{ fontSize: 60, color: '#79B6E3' }}>.</Text>
-                    <Text style={{ fontSize: 60, color: '#79B6E3' }}>.</Text>
+                <Pagination
+                        dotsLength={items.length}
+                        dotColor={'#6338A1'}
+                        inactiveDotColor={'#6338A1'}
+                        activeDotIndex={loading}
+                        inactiveDotOpacity={0.4}
+                        inactiveDotScale={0.6}
+                        carouselRef={this._slider1Ref}
+                        tappableDots={!!this._slider1Ref}
+                    />
                 </View>
 
             </View>
