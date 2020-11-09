@@ -9,7 +9,7 @@ const popularTips = (props) => {
         <Container style={{ backgroundColor: '#F6F6F6' }}>
             <Header style={{  backgroundColor: '#F6F6F6' }}>
                 <Left>
-                <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }}>
+                <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }} onPress={()=>navigation.navigate('tabApp')}>
                         <Image style={{ width: 12.97, height: 12.97 }} source={require('../Images/backIcon.png')} />
                     </TouchableOpacity>
                 </Left>
@@ -42,9 +42,9 @@ const popularTips = (props) => {
             </Item>
           </Form> */}
 
-
-            <Card style={{ width: 354, backgroundColor: '#F2F4F7' }}>
-                        <CardItem style={{ backgroundColor: '#F2F4F7' }}>
+          <TouchableOpacity onPress={()=>navigation.navigate('popularTipsDetails')}>
+            <Card style={{ width: 354, backgroundColor: '#F2F4F7' }} >
+                        <CardItem style={{ backgroundColor: '#F2F4F7' }} >
                             <Image source={require('../Images/Layer.png')} style={{ height: 146.53, width: 353.89, flex: 1 }} />
                         </CardItem>
                         <CardItem style={{ backgroundColor: '#F2F4F7' }}>
@@ -59,9 +59,11 @@ const popularTips = (props) => {
                             </Right>
                         </CardItem>
                     </Card>
-
-                    <Card style={{ width: 354, backgroundColor: '#F2F4F7' }}>
-                        <CardItem style={{ backgroundColor: '#F2F4F7' }}>
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity onPress={()=>navigation.navigate('popularTipsDetails')}>
+            <Card style={{ width: 354, backgroundColor: '#F2F4F7' }} >
+                        <CardItem style={{ backgroundColor: '#F2F4F7' }} >
                             <Image source={require('../Images/Layer.png')} style={{ height: 146.53, width: 353.89, flex: 1 }} />
                         </CardItem>
                         <CardItem style={{ backgroundColor: '#F2F4F7' }}>
@@ -76,9 +78,11 @@ const popularTips = (props) => {
                             </Right>
                         </CardItem>
                     </Card>
+                    </TouchableOpacity>
 
-                    <Card style={{ width: 354, backgroundColor: '#F2F4F7' }}>
-                        <CardItem style={{ backgroundColor: '#F2F4F7' }}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('popularTipsDetails')}>
+            <Card style={{ width: 354, backgroundColor: '#F2F4F7' }} >
+                        <CardItem style={{ backgroundColor: '#F2F4F7' }} >
                             <Image source={require('../Images/Layer.png')} style={{ height: 146.53, width: 353.89, flex: 1 }} />
                         </CardItem>
                         <CardItem style={{ backgroundColor: '#F2F4F7' }}>
@@ -93,6 +97,7 @@ const popularTips = (props) => {
                             </Right>
                         </CardItem>
                     </Card>
+                    </TouchableOpacity>
             </Content>
         </Container>
 

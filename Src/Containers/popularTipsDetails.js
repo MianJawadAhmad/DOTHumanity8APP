@@ -10,7 +10,7 @@ const popularTipsDetails = (props) => {
         <Container style={{ backgroundColor: '#F6F6F6' }}>
             <Header style={{  backgroundColor: '#F6F6F6' }}>
                 <Left>
-                <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }}>
+                <TouchableOpacity style={{ width: 14, height: 14, marginLeft: 20 }} onPress={()=>navigation.navigate('popularTips')}>
                         <Image style={{ width: 12.97, height: 12.97 }} source={require('../Images/backIcon.png')} />
                     </TouchableOpacity>
                 </Left>

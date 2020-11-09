@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View, Image, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native'
-import { Container, Content, Button, Item, Input, Header, Card, CardItem, Thumbnail, Left, Body, Right } from 'native-base'
+import { Text, View, Image, ActivityIndicator, TouchableOpacity, Alert, Modal, StyleSheet } from 'react-native'
+import { Container, Content, Button, Item, Input, Header, Card, CardItem, Thumbnail, Left, Body, Right,Drawer,SideBar } from 'native-base'
 import LinearGradient from 'react-native-linear-gradient';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-
+import Menu from './Menu'
 
 var items = [
     {
@@ -33,7 +33,7 @@ const SLIDER_1_FIRST_ITEM = 0;
 const Mainactivity8 = (props) => {
     const { navigation } = props
     const [loading, setLoading] = useState(SLIDER_1_FIRST_ITEM);
-
+    const [modalVisible, setModalVisible] = useState(false);
 
     {/* My services  */ }
     _renderItem = ({ item, index }) => {
@@ -220,13 +220,26 @@ const Mainactivity8 = (props) => {
     }
 
 
+    closeDrawer = () => {
+        this.drawer._root.close()
+      };
+      openDrawer = () => {
+        this.drawer._root.open()
+      };
+
+
 
 
     return (
+        <Drawer
+        ref={(ref) => { this.drawer = ref; }}
+        content={<Menu navigator={this.navigator} />}
+        onClose={() => this.closeDrawer()} >
         <Container style={{ backgroundColor: '#F6F6F6' }}>
             <Header style={{ borderBottomColor: '#F6F6F6', backgroundColor: '#F6F6F6' }}>
                 <Left>
-                    <TouchableOpacity style={{ marginLeft: 20 }}>
+                {/* onPress={this.openDrawer.bind(this)} */}
+                    <TouchableOpacity style={{ marginLeft: 20 }} >
                         <Image style={{ width: 45.21, height: 43.21 }} source={require('../Images/img5.png')} />
                     </TouchableOpacity>
 
@@ -235,7 +248,8 @@ const Mainactivity8 = (props) => {
                     <Text style={{ fontSize: 22 }}>My services </Text>
                 </Body>
                 <Right>
-                    <TouchableOpacity style={{ marginLeft: 20 }}>
+                    <TouchableOpacity style={{ marginLeft: 20 }}    onPress={() => {setModalVisible(true);}}
+      >
                         <Image style={{ width: 85, height: 32 }} source={require('../Images/img7.png')} />
                     </TouchableOpacity>
                 </Right>
@@ -267,7 +281,7 @@ const Mainactivity8 = (props) => {
 
 
                     {/* My requests  */}
-                    <TouchableOpacity onPress={()=>navigation.navigate('Myrequests')}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Mainactivity10')}>
                     <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My requests  </Text>
                     </TouchableOpacity>
                     
@@ -346,6 +360,35 @@ const Mainactivity8 = (props) => {
                         tappableDots={!!this._slider1Ref}
                     />
 
+<View style={styles.centeredView}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Follow us on our Social Channels </Text>
+            <View style={{flexDirection:'row'}}>
+                <Image  style={{width:79.62,height:65,margin:5}} source={require('../Images/fb.png')}/>
+                <Image  style={{width:79.62,height:65,margin:5}} source={require('../Images/insta.png')}/>
+                <Image  style={{width:79.62,height:65,margin:5}} source={require('../Images/yt.png')}/>
+            </View>
+
+            <TouchableOpacity
+              onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+            >
+              <Text style={{fontSize:20,color:'#007AFF',marginTop:30}}>Cancel</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+    </View>
 
 
                     {/* My Questions  */}
@@ -394,7 +437,7 @@ const Mainactivity8 = (props) => {
                             <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My services </Text>
                         </Left>
                         <Right>
-                            <TouchableOpacity style={{ margin: 10 }}>
+                            <TouchableOpacity style={{ margin: 10 }} onPress={()=>navigation.navigate('popularTips')}>
                                 <Text style={{ fontSize: 18, color: '#1585D8' }}>
                                     See all
                         </Text>
@@ -424,6 +467,7 @@ const Mainactivity8 = (props) => {
                 </Content>
             </Content>
         </Container>
+        </Drawer>
 
     )
 }
@@ -480,6 +524,43 @@ var styles = StyleSheet.create({
 
         flexDirection: 'row'
     },
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+      },
+      modalView: {
+          width:358.28,
+        margin: 20,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
+      },
+      openButton: {
+        backgroundColor: "#F194FF",
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2
+      },
+      textStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: "center"
+      }
 });
 
 

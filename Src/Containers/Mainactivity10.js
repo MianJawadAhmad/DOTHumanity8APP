@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View, Image, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, View, Image, ActivityIndicator, TouchableOpacity, StyleSheet,Modal } from 'react-native'
 import { Container, Content, Button, Item, Input, Header, Card, CardItem, Thumbnail, Left, Body, Right } from 'native-base'
 import LinearGradient from 'react-native-linear-gradient';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
@@ -33,7 +33,7 @@ const SLIDER_1_FIRST_ITEM = 0;
 const Mainactivity10 = (props) => {
     const { navigation } = props
     const [loading, setLoading] = useState(SLIDER_1_FIRST_ITEM);
-
+    const [modalVisible, setModalVisible] = useState(false);
 
     {/* My services  */ }
     _renderItem = ({ item, index }) => {
@@ -97,7 +97,7 @@ const Mainactivity10 = (props) => {
                     <Text style={{ fontSize: 22 }}>My services </Text>
                 </Body>
                 <Right>
-                    <TouchableOpacity style={{ marginLeft: 20 }}>
+                    <TouchableOpacity style={{ marginLeft: 20 }} onPress={() => {setModalVisible(true);}}>
                         <Image style={{ width: 85, height: 32 }} source={require('../Images/img7.png')} />
                     </TouchableOpacity>
                 </Right>
@@ -170,6 +170,36 @@ const Mainactivity10 = (props) => {
                             </CardItem>
                         </Card>
                     </View>
+
+                    <View style={styles.centeredView}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Follow us on our Social Channels </Text>
+            <View style={{flexDirection:'row'}}>
+                <Image  style={{width:79.62,height:65,margin:5}} source={require('../Images/fb.png')}/>
+                <Image  style={{width:79.62,height:65,margin:5}} source={require('../Images/insta.png')}/>
+                <Image  style={{width:79.62,height:65,margin:5}} source={require('../Images/yt.png')}/>
+            </View>
+
+            <TouchableOpacity
+              onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+            >
+              <Text style={{fontSize:20,color:'#007AFF',marginTop:30}}>Cancel</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+    </View>
 
                     <Text style={{ fontSize: 22, color: '#032F3E', margin: 10 }}>My Questions   </Text>
                     <View style={{alignItems:'center'}}>
@@ -288,6 +318,43 @@ var styles = StyleSheet.create({
 
         flexDirection: 'row'
     },
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+      },
+      modalView: {
+          width:358.28,
+        margin: 20,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
+      },
+      openButton: {
+        backgroundColor: "#F194FF",
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2
+      },
+      textStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: "center"
+      }
 });
 
 
